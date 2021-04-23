@@ -42,9 +42,23 @@
 # 改变已经打开的文件的属性：fcntl
 
 * 变参函数
+
 * 复制一个已有的文件描述符
+  
   * int ret = fcntl(fd,F_DUPFD);
+  
 * 获取/设置文件状态标志
   * open的flags函数
-  * 
+
+  1. 获取文件状态标识
+     * int flag = fcntl(fd,F_GETFL)
+  2. 设置文件状态标识
+     * flag = flag|O_APPEND
+     * fcntl(fd,F_SETFL,flag)
+
+* 可以更改的几个标识：O_APPEND,O_NONBLOCK(常用)
+
+  * 错误操作：
+    * open("tremp",O_RDONLY);
+      * 需要设置文件为O_RDWR
 
