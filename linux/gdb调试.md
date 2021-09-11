@@ -1,4 +1,4 @@
-1. gcc a.c b.c c.c -o app
+1. gcc a.c b.c c.c -o app 
 
    gcc a.c b.c c.c -o app -g
 
@@ -10,7 +10,7 @@
 
    a. gdp app
 
-   b. 给程序传参：set args xxx xxx
+   b. 给程序传参：**set args** xxx xxx
 
 3. 查看代码
 
